@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>The Daily</title>
+    <link>https://daily.7t7k.top/</link>
+    <description>Latest articles from The Daily – lifestyle, travel, coding &amp; more.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 May 2025 01:28:18 +0000</lastBuildDate>
+
+    <!--
+      ▸ HOW TO USE ▸
+      Duplicate the &lt;item&gt; block for each post you want to appear
+      in the feed and adjust title / link / description / pubDate.
+    -->
+    <item>
+      <title>Sample post title</title>
+      <link>https://daily.7t7k.top/single-standard-post.html</link>
+      <description>This is a short teaser for the sample post.</description>
+      <pubDate>Fri, 02 May 2025 01:28:18 +0000</pubDate>
+      <guid isPermaLink="true">https://daily.7t7k.top/single-standard-post.html</guid>
+    </item>
+
+  </channel>
+</rss>
