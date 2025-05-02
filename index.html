@@ -1,91 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>The Daily – Trendy Blog, News &amp; Magazine</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>The Daily | News & Magazine Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!-- SEO + Social sharing -->
-	<meta name="description" content="The Daily – مدوّنة ومجلّة عصرية للأخبار والمقالات.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="canonical" href="https://<YOUR-DOMAIN>/">
-	<link rel="alternate" type="application/rss+xml" title="The Daily RSS Feed" href="feed.xml">
+	<!-- ⬇️ CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/Pe-icon-7-stroke.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/owl.theme.css" />
+	<link rel="stylesheet" href="css/meanmenu.css" />
+	<link rel="stylesheet" href="css/highlight.css" />
+	<link rel="stylesheet" href="css/font.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
 
-	<!-- Open Graph / Twitter Cards -->
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="The Daily">
-	<meta property="og:description" content="مدوّنة ومجلّة عصرية للأخبار والمقالات.">
-	<meta property="og:url" content="https://<YOUR-DOMAIN>/">
-	<meta property="og:image" content="images/logo.png">
-	<meta name="twitter:card" content="summary_large_image">
+	<!-- fallback style: يعرض الصفحة إن تعطّل CSS الرئيسي -->
+	<style>body{background:#f6f8f9;color:#333;padding:0;margin:0;font-family:sans-serif}</style>
 
-	<!-- الأساس لجميع الروابط النسبية (يسهّل العمل على GitHub Pages) -->
-	<base href="/">
-
-	<!-- === CSS === -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/Pe-icon-7-stroke.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/owl.theme.css">
-	<link rel="stylesheet" href="css/meanmenu.css">
-	<link rel="stylesheet" href="css/highlight.css">
-	<link rel="stylesheet" href="css/font.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/responsive.css">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-
 <body>
-	<!-- ------------- محتوى الموقع (كما هو عندك) ------------- -->
-	<!-- ………… ضع هنا كل الـ HTML الخاص بك من القوائم، السلايدر، المقالات ………… -->
-	<!-- قمتُ بقصّه لتوفير المساحة. انسخه كما هو من نسختك الحالية لأنه لم يحتج تغييرات مسارات. -->
 
-	<!-- === JavaScript === -->
-	<!-- jQuery من CDN لأن الملف غير موجود محليًا -->
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"
-		integrity="sha384-55mE16BbSbBQLJq8B1X2A4Q48BwcVLi1Gx5ZJ5Tq2lhS8uAnhw2y0G0gLkP0XEy5"
-		crossorigin="anonymous"></script>
+<!-- ░░░ ابدأ المحتوى ░░░ -->
+<div class="container-fluid home-1" id="container-full">
+	<div class="row">
 
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/jquery.meanmenu.min.js"></script>
-	<script src="js/jquery.jscroll.js"></script>
-	<script src="js/scripts.js"></script>
+		<!-- ——— Left sidebar ——— -->
+		<div class="col-md-2 no-padding">
+			<aside id="left-sidebar">
 
-	<script>
-		/* إعدادات المكوّنات بعد تحميل الصفحة */
-		jQuery(function ($) {
+				<!-- Logo -->
+				<a class="logo d-block" href="index.html">
+					<img src="images/logo.png" alt="The Daily logo" class="img-responsive" />
+				</a>
 
-			/* تفعيل القائمة المتجاوبة */
-			$('.category-nav').meanmenu();
+				<!-- ===== MENU ===== -->
+				<nav id="menu-area" class="toogle-sidebar-sections">
+					<h3 class="menu-head accordion-toggle">
+						Menu <span class="toggle-icon"><i class="fa fa-bars"></i></span>
+					</h3>
+					<ul class="menu-body">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="elements.html">Features</a></li>
+					</ul>
+				</nav>
 
-			/* سلايدر الأخبار الرئيسى */
-			$('#slider').owlCarousel({
-				items: 1,
-				slideSpeed: 300,
-				paginationSpeed: 400,
-				singleItem: true,
-				autoPlay: true,
-				stopOnHover: true
-			});
+				<!-- ===== LATEST POSTS (static demo) ===== -->
+				<section class="latest-post-area toogle-sidebar-sections">
+					<h3 class="latest-post-head accordion-toggle">
+						Latest Posts <span class="toggle-icon"><i class="fa fa-bars"></i></span>
+					</h3>
+					<div class="latest-post-body">
+						<article class="post">
+							<img src="images/slim-menu-post/sm-post-1.jpg" class="img-responsive" alt="">
+							<h4>Life insurance save your life</h4><time>Dec 20 2019</time>
+						</article>
+						<article class="post">
+							<img src="images/slim-menu-post/sm-post-2.jpg" class="img-responsive" alt="">
+							<h4>Javascript & PHP free tutorial pack</h4><time>Dec 20 2019</time>
+						</article>
+						<article class="post">
+							<img src="images/slim-menu-post/sm-post-3.jpg" class="img-responsive" alt="">
+							<h4>Submit your travel experience…</h4><time>Dec 20 2019</time>
+						</article>
+					</div>
+				</section>
 
-			/* سلايدر التريند */
-			$('#trend-post').owlCarousel({
-				items: 5,
-				slideSpeed: 300,
-				paginationSpeed: 400,
-				autoPlay: true,
-				stopOnHover: true,
-				responsive: true,
-				responsiveRefreshRate: 200,
-				responsiveBaseWidth: window
-			});
+				<!-- … يمكنك لاحقاً إعادة بقية الـ Widgets إن أردت … -->
 
-			/* WOW.js للأنيميشن */
-			new WOW().init();
-		});
-	</script>
+			</aside><!-- /left-sidebar -->
+		</div><!-- /col-2 -->
+
+		<!-- ——— Main area ——— -->
+		<main class="col-md-10 no-padding">
+
+			<!-- Top-bar (مبسط) -->
+			<header class="top-bar">
+				<div class="top-bar-head clearfix">
+					<form class="pull-left" style="max-width:240px">
+						<input class="form-control" placeholder="Search …">
+					</form>
+				</div>
+			</header>
+
+			<!-- MAIN SLIDER (Owl) -->
+			<section class="main-slider">
+				<div id="slider" class="owl-carousel owl-theme">
+					<div class="item">
+						<img src="images/slider/slider-1.jpg" alt="" class="img-responsive">
+						<div class="carousel-caption"><h3>Couple cycle ride on road</h3></div>
+					</div>
+					<div class="item">
+						<img src="images/slider/slider-2.jpg" alt="" class="img-responsive">
+						<div class="carousel-caption"><h3>Mountain hiking with friends</h3></div>
+					</div>
+					<div class="item">
+						<img src="images/slider/slider-3.jpg" alt="" class="img-responsive">
+						<div class="carousel-caption"><h3>City night-life captured</h3></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- DEMO ARTICLES -->
+			<section class="main-post-body">
+				<div class="row">
+					<article class="col-md-4">
+						<img src="images/pb-content/pbc-sm-1.jpg" class="img-responsive" alt="">
+						<h4>Very dangerous: water ride</h4>
+						<time>Jan 20 2019</time>
+					</article>
+					<article class="col-md-4">
+						<img src="images/pb-content/pbc-sm-4.jpg" class="img-responsive" alt="">
+						<h4>World live music event 2019</h4>
+						<time>Jan 20 2019</time>
+					</article>
+					<article class="col-md-4">
+						<img src="images/pb-content/pbc-sm-6.jpg" class="img-responsive" alt="">
+						<h4>Nissan Galaxy car gives extra mileage</h4>
+						<time>Jan 20 2019</time>
+					</article>
+				</div>
+			</section>
+
+			<!-- FOOTER (بسيط) -->
+			<footer class="text-center" style="padding:40px 0;background:#111;color:#aaa">
+				<p>© 2019 The Daily – All rights reserved.</p>
+			</footer>
+
+		</main><!-- /main -->
+	</div><!-- /row -->
+</div><!-- /container-full -->
+
+<!-- ░░░ نهاية المحتوى ░░░ -->
+
+<!-- ⬇️ JavaScript -->
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.meanmenu.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<script>
+/* تفعيل الـ Plugins بعد التأكد من تحميل الصفحة */
+$(function () {
+	$('#slider').owlCarousel({
+		items: 1,
+		loop: true,
+		autoplay: true,
+		autoplayTimeout: 4500,
+		autoplayHoverPause: true
+	});
+	$('.category-nav').meanmenu();      /* القائمة الجانبية */
+	new WOW().init();                   /* الأنيميشن */
+});
+</script>
 </body>
 </html>
